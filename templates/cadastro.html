@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tela de cadastro</title>
+        <link href="{{url_for('static', filename='Tela_de_Cadastro.css')}}" rel="stylesheet">
+        <script src="{{url_for('static', filename='cadastro.js')}}"></script>
+        <meta charset="utf-8">
+    </head>
+    <body background="white" class="background_cadastro">
+    
+        <!--Nessa parte do código é feito o menu com o icone do Instituto Federal para voltar
+        ao tela de login e o ícone de ajuda para auxiliar o usuário caso seja necessário.-->
+        
+        <div class="div1">
+            <table border="0" width="100%" style="margin-top: 1%;">
+                <tr>
+                    <td width="93%">
+                        <a href="https://www.ifpi.edu.br">
+                        <img 
+                        style="max-width: 50px; margin-top: 0.5%; margin-left: 0.5%;" 
+                        width="150%" 
+                        height="10%"
+                        src="https://pbs.twimg.com/profile_images/438771627854024704/Az4OY07a_400x400.png">
+                        </a>
+                    </td>
+                    <td align="center" style="margin-right: 5%;" width="7%">
+                        <form action="http://127.0.0.1:5000/login">
+                            <button type="submit" id="btnVoltar" class="botao-2"><strong>Voltar</strong></button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Aqui começa o formulário de cadastro para o usuário registrar-se no site.-->
+
+        <center>
+            <div class="div2" align="center" style="margin-top: 5%;"><p>
+            <form action='#' method="POST">
+                <table border="0" width="100%" height="150%">
+                    <tr bgcolor="00FF00">
+                        <td style="border-top-left-radius:15px; border-top-right-radius: 15px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+                            <font size="6" face="arial" color="#FFFFFF">
+                                <center><strong>Painel de Cadastro</strong></center>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td>
+                            <input type="text" id="texto" placeholder="Matricula" name="txtMatricula" maxlength="30">
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr align="center">
+                        <td>
+                            <input type="text" id="texto" placeholder="Nome de Usuário" name="txtNome" maxlength="30">
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr align="center">
+                        <td>
+                            <input type="password" id="texto"  placeholder="Senha" name="txtSenha" maxlength="30" maxlength="30">
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr align="center">
+                        <td>
+                            <input type="password" id="texto" placeholder="Confirme sua Senha" name="txtSenha2" maxlength="30"></p>
+                        </td>
+                    </tr>
+                    <tr><td>&nbsp;</td></tr>
+                    <tr>
+                        <td>
+                           
+                                <center><button type="submit" id="btnCadastrar" class="botao botao-1" style="margin-bottom: 2%;margin-top: 5%;"><strong>Concluído</strong></button></center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p align="center">
+                                <font face="verdana" align="right" size="3" color="red">
+                                    <strong>{{msgErro}}</strong><br>
+                                </font>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        </center>
+    </body>
+</html>
